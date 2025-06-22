@@ -4,6 +4,11 @@ var max_jumps = 2
 var og_camera
 var og_rotation
 
+var stamina = 15.00 
+const STAMINA_CHANGE = 0.1
+
+var sprint_check = false
+
 #Basically runs when the scene is run
 func _ready(): 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -24,8 +29,16 @@ func _physics_process(delta):
 	var SPEED = 5.5
 	
 	var sprint_adjust = 2
-	if (Input.is_action_pressed("sprint")):
+	if (Input.is_action_pressed("sprint") and stamina > 0):
 		SPEED *= sprint_adjust
+		stamina -= STAMINA_CHANGE
+		sprint_check = true
+	else:
+		sprint_check = false
+		
+	if stamina < 15 and !Input.is_action_pressed("sprint"):
+		stamina += STAMINA_CHANGE
+	print("Stamina: " + str(stamina) + " Sprinting: " + str(sprint_check))
 	
 	var input_direction_2D = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_back"
