@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://73nqhhcxo1bv"]
+[gd_scene load_steps=6 format=3 uid="uid://73nqhhcxo1bv"]
 
 [ext_resource type="Material" uid="uid://2a5sblvo4b8n" path="res://level/mainplatform.tres" id="1_u44n3"]
 [ext_resource type="PackedScene" uid="uid://r43135uudm8s" path="res://player/player.tscn" id="1_wbfu4"]
 [ext_resource type="Material" uid="uid://c0s84bplyi1qs" path="res://level/platform.tres" id="2_u44n3"]
+[ext_resource type="PackedScene" uid="uid://cieek8qtvo6nv" path="res://pipe.tscn" id="4_sb48q"]
 
 [sub_resource type="Environment" id="Environment_wbfu4"]
 background_mode = 1
@@ -128,3 +129,15 @@ transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_wbfu4")
+
+[node name="Node3D" parent="." instance=ExtResource("4_sb48q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20)
+
+[node name="Node3D2" parent="." instance=ExtResource("4_sb48q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 20)
+
+[node name="Node3D3" parent="." instance=ExtResource("4_sb48q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -19)
+
+[node name="Node3D4" parent="." instance=ExtResource("4_sb48q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -19)

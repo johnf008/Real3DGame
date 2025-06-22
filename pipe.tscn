@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cieek8qtvo6nv"]
+
+[ext_resource type="Material" uid="uid://2a5sblvo4b8n" path="res://level/mainplatform.tres" id="1_bepn3"]
+[ext_resource type="Texture2D" uid="uid://6kebcy8fvern" path="res://level/checkboard.png" id="2_78010"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_arayy"]
+albedo_color = Color(0.43341, 0.466628, 0.466206, 1)
+albedo_texture = ExtResource("2_78010")
+uv1_triplanar = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(2.41625, 0, 0, 0, 30.8041, 0, 0, 0, 2.41625, 0, -26.2216, 0)
+material_override = ExtResource("1_bepn3")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(2.426, 0, 0, 0, 2.283, 0, 0, 0, 2.426, -0.000316381, 4.87228, -0.000352383)
+material_override = ExtResource("1_bepn3")
+radius = 0.757324
+height = 0.342622
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1.94795, 0, 0, 0, 1.83313, 0, 0, 0, 1.94795, -0.000316381, 4.98847, -0.000352383)
+material_override = SubResource("StandardMaterial3D_arayy")
+use_collision = true
+radius = 0.757324
+height = 0.342622

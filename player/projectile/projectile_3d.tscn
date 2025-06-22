@@ -6,7 +6,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_htc8w"]
 render_priority = 0
 shader = ExtResource("2_chfaf")
-shader_parameter/tail_color = Color(0.842269, 0.573078, 9.62615e-07, 1)
+shader_parameter/tail_color = Color(0.674981, 0.455979, 5.77569e-07, 1)
 shader_parameter/head_color = Color(0.991114, 0.735392, 0.339175, 1)
 
 [node name="Projectile3D" instance=ExtResource("1_ndq6i")]
