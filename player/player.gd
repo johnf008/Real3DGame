@@ -1,10 +1,14 @@
 extends CharacterBody3D
 
 var max_jumps = 2
+var og_camera
+var og_rotation
 
 #Basically runs when the scene is run
 func _ready(): 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	og_camera = %Camera3D.rotation_degrees
+	og_rotation = rotation_degrees
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -17,7 +21,11 @@ func _unhandled_input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) 
 
 func _physics_process(delta):
-	const SPEED = 5.5
+	var SPEED = 5.5
+	
+	var sprint_adjust = 2
+	if (Input.is_action_pressed("sprint")):
+		SPEED *= sprint_adjust
 	
 	var input_direction_2D = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_back"
@@ -31,6 +39,7 @@ func _physics_process(delta):
 	velocity.z = direction.z * SPEED
 	
 	velocity.y -= 20.0 * delta
+	
 	if Input.is_action_just_pressed("jump") && max_jumps > 0:
 		velocity.y = 10.0
 		max_jumps -= 1
@@ -48,6 +57,17 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("shoot") and %Timer.is_stopped():
 		shoot_bullet()
+	
+	#print(str(%Camera3D.rotation_degrees.x) + " " + str(%Camera3D.rotation_degrees.y) + " " + str(%Camera3D.rotation_degrees.z))
+	if global_transform.origin.y < -20.0:
+		global_transform.origin.x = 0.0
+		global_transform.origin.y = -0.06333388388157
+		global_transform.origin.z = 0.0
+		
+		rotation_degrees = og_rotation
+		%Camera3D.rotation_degrees = og_camera
+		
+
 
 func shoot_bullet():
 	const BULLET_3D = preload("res://player/bullet_3d.tscn")
