@@ -13,7 +13,7 @@ var health = 3
 func _physics_process(delta):
 	var eye_location = Vector3(0, camera.global_position.y, 0)
 	 
-	print("Camera location test" + str(camera.global_position.y))
+	#print("Camera location test" + str(camera.global_position.y))
 	
 	var target = camera.global_position
 	var direction = (target - global_position).normalized()

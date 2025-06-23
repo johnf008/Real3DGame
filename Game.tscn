@@ -21,7 +21,7 @@ fog_height = 0.15
 fog_height_density = 0.1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r0x5m"]
-size = Vector3(5.057, 1, 4.935)
+size = Vector3(5.382, 1, 4.935)
 
 [node name="Game" type="Node3D"]
 
@@ -153,8 +153,10 @@ material = ExtResource("2_u44n3")
 script = ExtResource("6_r0x5m")
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 3, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2208, 1.1765, -0.114174)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.493811, -0.477194, -0.996391)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.493811, -0.279358, -0.996391)
 shape = SubResource("BoxShape3D_r0x5m")
+
+[connection signal="area_entered" from="Area3D" to="vanish_platform_one" method="_on_area_3d_area_entered"]
