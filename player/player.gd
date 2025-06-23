@@ -80,6 +80,8 @@ func _physics_process(delta):
 		
 		rotation_degrees = og_rotation
 		%Camera3D.rotation_degrees = og_camera
+	
+	
 		
 
 
