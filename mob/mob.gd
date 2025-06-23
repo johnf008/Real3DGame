@@ -15,7 +15,7 @@ func _physics_process(delta):
 	 
 	print("Camera location test" + str(camera.global_position.y))
 	
-	var target = player.global_position + eye_location
+	var target = camera.global_position
 	var direction = (target - global_position).normalized()
 	
 	#print("Should be player global pos y" + str(player.global_position[1]))
