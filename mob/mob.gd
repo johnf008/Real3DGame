@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-var speed = randf_range(2.0, 4.0)
+var speed = randf_range(1.0, 2.0)
 
 @onready var bat_model: Node3D = %bat_model
 

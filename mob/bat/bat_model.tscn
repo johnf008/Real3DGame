@@ -195,19 +195,19 @@ node_connections = [&"OneShot", 0, &"Idle", &"OneShot", 1, &"Hurt", &"output", 0
 script = ExtResource("2_vgr6s")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/position = Vector3(0, 0.0220904, 0)
-bones/1/rotation = Quaternion(0.142145, 0.025834, -0.659815, 0.737408)
-bones/2/rotation = Quaternion(0.160216, 0.0656946, 0.372742, 0.911635)
-bones/3/rotation = Quaternion(0.165832, 0.113989, 0.350027, 0.91487)
-bones/4/rotation = Quaternion(0.142145, -0.025834, 0.659815, 0.737408)
-bones/5/rotation = Quaternion(0.160216, -0.0656946, -0.372742, 0.911635)
-bones/6/rotation = Quaternion(0.165832, -0.113989, -0.350027, 0.91487)
+bones/0/position = Vector3(0, 0.0154847, 0)
+bones/1/rotation = Quaternion(0.0876891, 0.0746016, -0.678343, 0.725669)
+bones/2/rotation = Quaternion(0.114079, 0.0423665, 0.344004, 0.931049)
+bones/3/rotation = Quaternion(0.16461, 0.10913, 0.329118, 0.923404)
+bones/4/rotation = Quaternion(0.0876891, -0.0746016, 0.678343, 0.725669)
+bones/5/rotation = Quaternion(0.114079, -0.0423665, -0.344004, 0.931049)
+bones/6/rotation = Quaternion(0.16461, -0.10913, -0.329118, 0.923404)
 bones/7/position = Vector3(0.130992, -0.227392, -0.0878515)
-bones/7/rotation = Quaternion(0.261968, 0.0834551, 0.265751, 0.924004)
-bones/8/rotation = Quaternion(3.46498e-08, 0.68016, 0.733064, 2.11293e-08)
+bones/7/rotation = Quaternion(0.261968, 0.0834552, 0.265751, 0.924005)
+bones/8/rotation = Quaternion(3.74084e-08, 0.700063, 0.714081, 2.26409e-08)
 bones/10/position = Vector3(-0.130992, -0.227392, -0.0878515)
-bones/10/rotation = Quaternion(0.261968, -0.0834551, -0.265751, 0.924004)
-bones/11/rotation = Quaternion(2.28005e-08, 0.68016, 0.733064, 4.32141e-08)
+bones/10/rotation = Quaternion(0.261968, -0.0834552, -0.265751, 0.924005)
+bones/11/rotation = Quaternion(2.21088e-08, 0.700063, 0.714081, 3.53163e-08)
 
 [node name="bat" parent="Armature/Skeleton3D" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_vgr6s")
@@ -225,4 +225,4 @@ tree_root = SubResource("AnimationNodeBlendTree_gwaj3")
 anim_player = NodePath("../AnimationPlayer")
 parameters/OneShot/active = 0.0
 parameters/OneShot/internal_active = 0.0
-parameters/OneShot/request = -0.0573142
+parameters/OneShot/request = 0
