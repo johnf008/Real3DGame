@@ -28,7 +28,7 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	var SPEED = 5.5
 	
-	print(str(global_transform.origin.y))
+	#print(str(global_transform.origin.y))
 	var sprint_adjust = 2
 	if (Input.is_action_pressed("sprint") and stamina > 0):
 		SPEED *= sprint_adjust
