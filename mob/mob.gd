@@ -1,8 +1,9 @@
 extends RigidBody3D
 
-var speed = randf_range(1.0, 2.0)
-
+var speed = randf_range(5.0, 9.0)
+var health = 3
 @onready var bat_model: Node3D = %bat_model
+@onready var timer: Timer = %Timer
 
 @onready var player = get_node("/root/Game/Player")
 
@@ -12,8 +13,8 @@ var speed = randf_range(1.0, 2.0)
 func _physics_process(delta): 
 	print("Camera location test" + str(camera.global_position.y))
 	
-	var target = (player.global_position + eye_location)
-	var direction = target - global_position
+	var target = player.global_position + eye_location
+	var direction = (target - global_position).normalized()
 	
 	#print("Should be player global pos y" + str(player.global_position[1]))
 	
@@ -30,4 +31,20 @@ func _physics_process(delta):
 	
 	
 func take_damage():
+	if health == 0: 
+		return
 	bat_model.hurt()
+	
+	health -= 1
+	
+	if health == 0:
+		set_physics_process(false)
+		gravity_scale = 1.0
+		var direction = -1.0 * global_position.direction_to(player.global_position)
+		var random_upward_force = Vector3.UP * randf_range(1.0, 5.0)
+		apply_central_impulse(direction * 10.0 + random_upward_force)
+		timer.start()
+
+
+func _on_timer_timeout() -> void:
+	queue_free()
