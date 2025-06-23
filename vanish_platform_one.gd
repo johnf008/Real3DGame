@@ -17,3 +17,4 @@ func _on_platform_vanish_timer_timeout() -> void:
 
 func warn():
 	animation_tree.set("parameters/OneShot/request", true)
+	

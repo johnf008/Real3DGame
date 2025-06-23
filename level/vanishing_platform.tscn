@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cf4gbkkvcn0eu"]
 
-[ext_resource type="Material" uid="uid://c0s84bplyi1qs" path="res://level/platform.tres" id="1_xft4p"]
+[ext_resource type="Material" uid="uid://5y7g1lv5dvyp" path="res://level/platform_warning.tres" id="1_xft4p"]
 [ext_resource type="Script" uid="uid://4qs3wbhnqiwg" path="res://vanish_platform_one.gd" id="2_w7a1x"]
 
 [sub_resource type="Animation" id="Animation_8n3j6"]
@@ -9,22 +9,10 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:material")
+tracks/0/path = NodePath(".:material:albedo_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_xft4p")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:material:albedo_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -38,26 +26,14 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:material")
+tracks/0/path = NodePath(".:material:albedo_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:material:albedo_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.266667, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.84953, 0.361653, 0.528456, 1), Color(0.64219, 0.549419, 0.109086, 1), Color(0.85098, 0.360784, 0.529412, 1)]
+"values": [Color(0.84953, 0.361653, 0.528456, 1), Color(0.904325, 0.988691, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w41ph"]
