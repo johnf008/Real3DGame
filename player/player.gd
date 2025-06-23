@@ -91,3 +91,7 @@ func shoot_bullet():
 	new_bullet.global_transform = %Marker3D.global_transform
 	
 	%Timer.start()
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.has_method("disappear"):
+		
