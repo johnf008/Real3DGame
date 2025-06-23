@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://r43135uudm8s" path="res://player/player.tscn" id="1_wbfu4"]
 [ext_resource type="Material" uid="uid://c0s84bplyi1qs" path="res://level/platform.tres" id="2_u44n3"]
 [ext_resource type="PackedScene" uid="uid://cieek8qtvo6nv" path="res://pipe.tscn" id="4_sb48q"]
-[ext_resource type="PackedScene" uid="uid://dni7cq3tcfh5d" path="res://mob/mob.tscn" id="5_t88pq"]
+[ext_resource type="PackedScene" uid="uid://bx0g27qytephy" path="res://mob/spawner/mob_spawner_3d.tscn" id="5_t88pq"]
 
 [sub_resource type="Environment" id="Environment_wbfu4"]
 background_mode = 1
@@ -144,5 +144,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -19)
 [node name="Node3D4" parent="." instance=ExtResource("4_sb48q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -19)
 
-[node name="Mob" parent="." instance=ExtResource("5_t88pq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1716, 6.27034, -18.4905)
+[node name="MobSpawner3D" parent="." instance=ExtResource("5_t88pq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 0)

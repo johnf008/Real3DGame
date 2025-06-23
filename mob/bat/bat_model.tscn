@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bi0ygeahj8euq" path="res://mob/bat/bat_model.gd" id="2_vgr6s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vgr6s"]
+resource_local_to_scene = true
 resource_name = "bat_mat"
 cull_mode = 2
 albedo_texture = ExtResource("2_030dj")
@@ -195,19 +196,19 @@ node_connections = [&"OneShot", 0, &"Idle", &"OneShot", 1, &"Hurt", &"output", 0
 script = ExtResource("2_vgr6s")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/position = Vector3(0, 0.0136182, 0)
-bones/1/rotation = Quaternion(0.0749436, 0.0866038, -0.681559, 0.722745)
-bones/2/rotation = Quaternion(0.10071, 0.0363995, 0.337003, 0.935394)
-bones/3/rotation = Quaternion(0.160014, 0.106281, 0.323665, 0.926467)
-bones/4/rotation = Quaternion(0.0749436, -0.0866038, 0.681559, 0.722745)
-bones/5/rotation = Quaternion(0.10071, -0.0363995, -0.337003, 0.935394)
-bones/6/rotation = Quaternion(0.160014, -0.106281, -0.323665, 0.926467)
+bones/0/position = Vector3(0, -0.0216029, 0)
+bones/1/rotation = Quaternion(0.00894083, 0.140121, -0.628168, 0.765305)
+bones/2/rotation = Quaternion(-0.161308, -0.0516532, 0.301553, 0.938285)
+bones/3/rotation = Quaternion(-0.202431, 0.000949157, 0.224066, 0.953318)
+bones/4/rotation = Quaternion(0.00894083, -0.140121, 0.628168, 0.765305)
+bones/5/rotation = Quaternion(-0.161308, 0.0516532, -0.301553, 0.938285)
+bones/6/rotation = Quaternion(-0.202431, -0.000949157, -0.224066, 0.953318)
 bones/7/position = Vector3(0.130992, -0.227392, -0.0878515)
 bones/7/rotation = Quaternion(0.261968, 0.0834552, 0.265751, 0.924005)
-bones/8/rotation = Quaternion(3.86078e-08, 0.702774, 0.711413, 2.28508e-08)
+bones/8/rotation = Quaternion(3.60748e-08, 0.565891, 0.82448, 2.27309e-08)
 bones/10/position = Vector3(-0.130992, -0.227392, -0.0878515)
 bones/10/rotation = Quaternion(0.261968, -0.0834552, -0.265751, 0.924005)
-bones/11/rotation = Quaternion(2.11843e-08, 0.702774, 0.711413, 3.50623e-08)
+bones/11/rotation = Quaternion(2.47616e-08, 0.565892, 0.82448, 4.17903e-08)
 
 [node name="bat" parent="Armature/Skeleton3D" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_vgr6s")

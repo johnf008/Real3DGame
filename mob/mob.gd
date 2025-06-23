@@ -8,9 +8,11 @@ var health = 3
 @onready var player = get_node("/root/Game/Player")
 
 @onready var camera = get_node("/root/Game/Player/Camera3D")
-@onready var eye_location = Vector3(0, camera.global_position.y, 0)
 
-func _physics_process(delta): 
+
+func _physics_process(delta):
+	var eye_location = Vector3(0, camera.global_position.y, 0)
+	 
 	print("Camera location test" + str(camera.global_position.y))
 	
 	var target = player.global_position + eye_location
@@ -44,6 +46,8 @@ func take_damage():
 		var random_upward_force = Vector3.UP * randf_range(1.0, 5.0)
 		apply_central_impulse(direction * 10.0 + random_upward_force)
 		timer.start()
+		
+		lock_rotation = false
 
 
 func _on_timer_timeout() -> void:
