@@ -28,6 +28,7 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	var SPEED = 5.5
 	
+	print(str(global_transform.origin.y))
 	var sprint_adjust = 2
 	if (Input.is_action_pressed("sprint") and stamina > 0):
 		SPEED *= sprint_adjust
@@ -38,7 +39,7 @@ func _physics_process(delta):
 		
 	if stamina < 15 and !Input.is_action_pressed("sprint"):
 		stamina += STAMINA_CHANGE
-	print("Stamina: " + str(stamina) + " Sprinting: " + str(sprint_check))
+	#print("Stamina: " + str(stamina) + " Sprinting: " + str(sprint_check))
 	
 	var input_direction_2D = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_back"
