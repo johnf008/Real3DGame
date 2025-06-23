@@ -5,13 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://dpjbm0gwry6ly" path="res://mob/spawner/spawner_model.tscn" id="3_y27t3"]
 
 [node name="MobSpawner3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_y27t3")
 mob_to_spawn = ExtResource("2_6b6mc")
 
 [node name="Marker3D" type="Marker3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.90112, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.90112, 0)
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
@@ -19,5 +18,6 @@ wait_time = 2.0
 autostart = true
 
 [node name="spawner_model" parent="." instance=ExtResource("3_y27t3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
