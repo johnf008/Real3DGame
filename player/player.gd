@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal update_score
+
 var max_jumps = 2
 var og_camera
 var og_rotation
@@ -80,7 +82,9 @@ func _physics_process(delta):
 		
 		rotation_degrees = og_rotation
 		%Camera3D.rotation_degrees = og_camera
-	
+		
+		AmountOfEnemies.bats_died -= 3 #Cheap way to update score once the player falls (ik it's bad to whoever is reading this ;-;
+		update_score.emit()
 	
 		
 

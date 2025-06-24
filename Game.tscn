@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://73nqhhcxo1bv"]
+[gd_scene load_steps=11 format=3 uid="uid://73nqhhcxo1bv"]
 
 [ext_resource type="Script" uid="uid://dnyd3bsu5ipk3" path="res://game.gd" id="1_3mrqo"]
 [ext_resource type="Material" uid="uid://2a5sblvo4b8n" path="res://level/mainplatform.tres" id="1_u44n3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cieek8qtvo6nv" path="res://pipe.tscn" id="4_sb48q"]
 [ext_resource type="PackedScene" uid="uid://bx0g27qytephy" path="res://mob/spawner/mob_spawner_3d.tscn" id="5_t88pq"]
 [ext_resource type="PackedScene" uid="uid://cf4gbkkvcn0eu" path="res://level/vanishing_platform.tscn" id="6_r0x5m"]
+[ext_resource type="FontFile" uid="uid://d1aywiku4f422" path="res://fot-yuruka-std.ttf" id="8_joorw"]
 
 [sub_resource type="Environment" id="Environment_wbfu4"]
 background_mode = 1
@@ -22,7 +23,9 @@ fog_height = 0.15
 fog_height_density = 0.1
 
 [sub_resource type="LabelSettings" id="LabelSettings_r0x5m"]
+font = ExtResource("8_joorw")
 font_size = 56
+font_color = Color(0.185355, 5.17887e-05, 0.664588, 1)
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_3mrqo")
@@ -143,13 +146,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1494, 2.59828, -19.0927)
 
 [node name="Label" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = 35.0
-offset_top = 31.0
-offset_right = 247.0
-offset_bottom = 108.0
+offset_left = 31.0
+offset_top = 28.0
+offset_right = 290.0
+offset_bottom = 105.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_r0x5m")
 
+[connection signal="update_score" from="Player" to="." method="_on_player_update_score"]
 [connection signal="mob_spawn" from="Node3D" to="." method="_on_node_3d_mob_spawn"]
 [connection signal="mob_spawn" from="Node3D2" to="." method="_on_node_3d_2_mob_spawn"]
 [connection signal="mob_spawn" from="Node3D3" to="." method="_on_node_3d_3_mob_spawn"]
