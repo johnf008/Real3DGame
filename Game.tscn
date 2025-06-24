@@ -143,4 +143,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -19)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 0)
 
 [node name="Vanishing_Platform" parent="." instance=ExtResource("6_r0x5m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8424, 2.74843, 18.9094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8424, 2.59828, 18.9094)
+
+[node name="Vanishing_Platform2" parent="." instance=ExtResource("6_r0x5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8424, 2.59828, 13.3015)
