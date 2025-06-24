@@ -74,6 +74,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("shoot") and %Timer.is_stopped():
 		shoot_bullet()
 	
+	
 	#print(str(%Camera3D.rotation_degrees.x) + " " + str(%Camera3D.rotation_degrees.y) + " " + str(%Camera3D.rotation_degrees.z))
 	if global_transform.origin.y < -20.0:
 		global_transform.origin.x = 0.0

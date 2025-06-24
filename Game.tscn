@@ -153,6 +153,13 @@ offset_bottom = 105.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_r0x5m")
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 103.0
+offset_right = 190.0
+offset_bottom = 126.0
+text = "Time Survived: 0:00"
+
 [connection signal="update_score" from="Player" to="." method="_on_player_update_score"]
 [connection signal="mob_spawn" from="Node3D" to="." method="_on_node_3d_mob_spawn"]
 [connection signal="mob_spawn" from="Node3D2" to="." method="_on_node_3d_2_mob_spawn"]

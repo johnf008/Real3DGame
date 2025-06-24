@@ -26,3 +26,7 @@ func _on_node_3d_4_mob_spawn(mob) -> void:
 
 func _on_player_update_score() -> void:
 	adjust_label()
+
+
+func _on_time_survived_timeout() -> void:
+	pass # Replace with function body.
