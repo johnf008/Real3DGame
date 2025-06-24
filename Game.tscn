@@ -58,18 +58,6 @@ use_collision = true
 size = Vector3(5, 1, 5)
 material = ExtResource("2_u44n3")
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 2.5, -13)
-use_collision = true
-size = Vector3(5, 1, 5)
-material = ExtResource("2_u44n3")
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5, 2.5, 14)
-use_collision = true
-size = Vector3(5, 1, 5)
-material = ExtResource("2_u44n3")
-
 [node name="CSGBox3D10" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5, 2.5, -13)
 use_collision = true
@@ -78,12 +66,6 @@ material = ExtResource("2_u44n3")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 2.5, 19)
-use_collision = true
-size = Vector3(5, 1, 5)
-material = ExtResource("2_u44n3")
-
-[node name="CSGBox3D13" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 2.5, -18)
 use_collision = true
 size = Vector3(5, 1, 5)
 material = ExtResource("2_u44n3")
@@ -146,4 +128,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8424, 2.59828, 18.9094)
 
 [node name="Vanishing_Platform2" parent="." instance=ExtResource("6_r0x5m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8424, 2.59828, 13.3015)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5625, 2.59828, 13.3015)
+
+[node name="Vanishing_Platform3" parent="." instance=ExtResource("6_r0x5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8695, 2.59828, -13.4847)
+
+[node name="Vanishing_Platform4" parent="." instance=ExtResource("6_r0x5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1494, 2.59828, -19.0927)
