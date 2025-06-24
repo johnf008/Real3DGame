@@ -53,7 +53,6 @@ animation = &"RESET"
 animation = &"warning"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8n3j6"]
-graph_offset = Vector2(-377.482, 141.814)
 nodes/OneShot/node = SubResource("AnimationNodeOneShot_xft4p")
 nodes/OneShot/position = Vector2(540, 240)
 nodes/output/position = Vector2(760, 260)
