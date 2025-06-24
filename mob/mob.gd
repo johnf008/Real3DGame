@@ -53,7 +53,7 @@ func take_damage():
 		AmountOfEnemies.current_bats -= 1
 		AmountOfEnemies.bats_died += 1
 		
-		print(str(AmountOfEnemies.bats_died))
+		#print(str(AmountOfEnemies.bats_died))
 		var text_thing = ":D"
 		mob_died.emit()
 		
