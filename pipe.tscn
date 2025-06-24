@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://cieek8qtvo6nv"]
+[gd_scene load_steps=11 format=4 uid="uid://cieek8qtvo6nv"]
 
+[ext_resource type="Script" uid="uid://cmio7mssqhyrh" path="res://pipe.gd" id="1_1uqvy"]
 [ext_resource type="Material" uid="uid://2a5sblvo4b8n" path="res://level/mainplatform.tres" id="1_bepn3"]
 [ext_resource type="Texture2D" uid="uid://6kebcy8fvern" path="res://level/checkboard.png" id="2_78010"]
+[ext_resource type="PackedScene" uid="uid://dni7cq3tcfh5d" path="res://mob/mob.tscn" id="2_i3wvs"]
 [ext_resource type="Shader" uid="uid://cfnwyva3u4qeb" path="res://mob/spawner/spawner_halo.gdshader" id="3_arayy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_arayy"]
@@ -46,7 +48,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_61rv2")
 
-[node name="Node3D" type="Node3D"]
+[node name="Pipe" type="Node3D"]
+script = ExtResource("1_1uqvy")
+mob_to_spawn = ExtResource("2_i3wvs")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(2.41625, 0, 0, 0, 30.8041, 0, 0, 0, 2.41625, 0, -26.2216, 0)
@@ -70,3 +74,14 @@ transform = Transform3D(2.1, 0, 0, 0, -2.1, 1.83588e-07, 0, -1.83588e-07, -2.1, 
 material_override = SubResource("ShaderMaterial_1uqvy")
 mesh = SubResource("ArrayMesh_i3wvs")
 skeleton = NodePath("")
+
+[node name="PipeMarker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+
+[node name="PipeSpawnTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="PipeSpawnTimer" to="." method="_on_pipe_spawn_timer_timeout"]
