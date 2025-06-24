@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://73nqhhcxo1bv"]
+[gd_scene load_steps=9 format=3 uid="uid://73nqhhcxo1bv"]
 
 [ext_resource type="Script" uid="uid://dnyd3bsu5ipk3" path="res://game.gd" id="1_3mrqo"]
 [ext_resource type="Material" uid="uid://2a5sblvo4b8n" path="res://level/mainplatform.tres" id="1_u44n3"]
 [ext_resource type="PackedScene" uid="uid://r43135uudm8s" path="res://player/player.tscn" id="1_wbfu4"]
 [ext_resource type="Material" uid="uid://c0s84bplyi1qs" path="res://level/platform.tres" id="2_u44n3"]
 [ext_resource type="PackedScene" uid="uid://cieek8qtvo6nv" path="res://pipe.tscn" id="4_sb48q"]
-[ext_resource type="PackedScene" uid="uid://bx0g27qytephy" path="res://mob/spawner/mob_spawner_3d.tscn" id="5_t88pq"]
 [ext_resource type="PackedScene" uid="uid://cf4gbkkvcn0eu" path="res://level/vanishing_platform.tscn" id="6_r0x5m"]
 [ext_resource type="LabelSettings" uid="uid://cxoi1y3laaotj" path="res://label_settings.tres" id="8_joorw"]
 
@@ -123,9 +122,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -19)
 
 [node name="Node3D4" parent="." instance=ExtResource("4_sb48q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -19)
-
-[node name="MobSpawner3D" parent="." instance=ExtResource("5_t88pq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 0)
 
 [node name="Vanishing_Platform" parent="." instance=ExtResource("6_r0x5m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8424, 2.59828, 18.9094)

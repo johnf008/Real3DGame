@@ -25,10 +25,11 @@ func _unhandled_input(event):
 		%Camera3D.rotation_degrees.x = clamp(
 			%Camera3D.rotation_degrees.x, -80, 80
 		)
-	elif event.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) 
+	
 
 func _physics_process(delta):
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 	var SPEED = 5.5
 	
 	#print(str(global_transform.origin.y))
