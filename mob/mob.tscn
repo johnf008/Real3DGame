@@ -19,7 +19,7 @@ unique_name_in_owner = true
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 3.0
+wait_time = 6.321
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

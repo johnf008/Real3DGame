@@ -81,7 +81,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
 
 [node name="PipeSpawnTimer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 2.0
+wait_time = 5.8
 autostart = true
 
 [connection signal="timeout" from="PipeSpawnTimer" to="." method="_on_pipe_spawn_timer_timeout"]

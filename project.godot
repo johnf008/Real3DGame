@@ -15,6 +15,10 @@ run/main_scene="uid://73nqhhcxo1bv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AmountOfEnemies="*res://amount_of_enemies.gd"
+
 [display]
 
 window/stretch/mode="viewport"

@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-var speed = randf_range(5.0, 9.0)
+var speed = randf_range(3.0, 9.0)
 var health = 3
 @onready var bat_model: Node3D = %bat_model
 @onready var timer: Timer = %Timer
@@ -48,6 +48,7 @@ func take_damage():
 		timer.start()
 		
 		lock_rotation = false
+		AmountOfEnemies.current_bats -= 1
 
 
 func _on_timer_timeout() -> void:
