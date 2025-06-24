@@ -149,3 +149,8 @@ offset_right = 247.0
 offset_bottom = 108.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_r0x5m")
+
+[connection signal="mob_spawn" from="Node3D" to="." method="_on_node_3d_mob_spawn"]
+[connection signal="mob_spawn" from="Node3D2" to="." method="_on_node_3d_2_mob_spawn"]
+[connection signal="mob_spawn" from="Node3D3" to="." method="_on_node_3d_3_mob_spawn"]
+[connection signal="mob_spawn" from="Node3D4" to="." method="_on_node_3d_4_mob_spawn"]

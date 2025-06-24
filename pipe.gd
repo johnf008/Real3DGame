@@ -5,7 +5,7 @@ extends Node3D
 @onready var pipe_spawn_timer: Timer = %PipeSpawnTimer
 @onready var pipe_marker: Marker3D = %PipeMarker
 
-signal mob_spawn()
+signal mob_spawn(mob)
 
 func _on_pipe_spawn_timer_timeout() -> void:
 	
@@ -17,6 +17,6 @@ func _on_pipe_spawn_timer_timeout() -> void:
 		new_mob.global_position = pipe_marker.global_position
 		AmountOfEnemies.current_bats += 1
 		
-		mob_spawn.emit()
+		mob_spawn.emit(new_mob)
 	
 	#print("Chat is this even executing?") yes
