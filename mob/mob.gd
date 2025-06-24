@@ -1,5 +1,6 @@
 extends RigidBody3D
 
+signal mob_died()
 var speed = randf_range(3.0, 9.0)
 var health = 3
 @onready var bat_model: Node3D = %bat_model
@@ -9,6 +10,7 @@ var health = 3
 
 @onready var camera = get_node("/root/Game/Player/Camera3D")
 
+@onready var label: Label = %Label
 
 func _physics_process(delta):
 	var eye_location = Vector3(0, camera.global_position.y, 0)
@@ -49,6 +51,14 @@ func take_damage():
 		
 		lock_rotation = false
 		AmountOfEnemies.current_bats -= 1
+		AmountOfEnemies.bats_died += 1
+		
+		print(str(AmountOfEnemies.bats_died))
+		var text_thing = ":D"
+		mob_died.emit()
+		
+		
+		#label.text = ""
 
 
 func _on_timer_timeout() -> void:

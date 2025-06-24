@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://73nqhhcxo1bv"]
+[gd_scene load_steps=10 format=3 uid="uid://73nqhhcxo1bv"]
 
+[ext_resource type="Script" uid="uid://dnyd3bsu5ipk3" path="res://game.gd" id="1_3mrqo"]
 [ext_resource type="Material" uid="uid://2a5sblvo4b8n" path="res://level/mainplatform.tres" id="1_u44n3"]
 [ext_resource type="PackedScene" uid="uid://r43135uudm8s" path="res://player/player.tscn" id="1_wbfu4"]
 [ext_resource type="Material" uid="uid://c0s84bplyi1qs" path="res://level/platform.tres" id="2_u44n3"]
@@ -20,7 +21,11 @@ fog_density = 0.0048
 fog_height = 0.15
 fog_height_density = 0.1
 
+[sub_resource type="LabelSettings" id="LabelSettings_r0x5m"]
+font_size = 56
+
 [node name="Game" type="Node3D"]
+script = ExtResource("1_3mrqo")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
@@ -135,3 +140,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8695, 2.59828, -13.4847)
 
 [node name="Vanishing_Platform4" parent="." instance=ExtResource("6_r0x5m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1494, 2.59828, -19.0927)
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 35.0
+offset_top = 31.0
+offset_right = 247.0
+offset_bottom = 108.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_r0x5m")
