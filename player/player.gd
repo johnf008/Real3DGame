@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 signal update_score
+signal reset_seconds
 
 var max_jumps = 2
 var og_camera
@@ -86,6 +87,7 @@ func _physics_process(delta):
 		
 		AmountOfEnemies.bats_died -= 3 #Cheap way to update score once the player falls (ik it's bad to whoever is reading this ;-;
 		update_score.emit()
+		reset_seconds.emit()
 	
 		
 
